@@ -39,6 +39,22 @@ Principal. This module creates identity and login, but no secret policy grants.
 - `token_policies` on the principal login role is intentionally empty.
 - Policy grants are attached later through use-case identity groups.
 
+## No-code provisioning
+
+This module is no-code enabled in the `hc-ric-demo` private registry (pinned to `0.0.1`). Open the module, click **Provision workspace**, choose a project and workspace name, then complete the form. Trust outputs from `cluster-onboarding` feed `jwt_auth_path` and `jwt_mount_accessor`.
+
+Form fields:
+
+| Field | Required | Notes |
+|---|---|---|
+| `cluster_name` | yes | Cluster identifier |
+| `principal_name` | yes | Principal identifier |
+| `jwt_auth_path` | yes | From trust module |
+| `jwt_mount_accessor` | yes | From trust module |
+| `ocp_namespace` | yes | ServiceAccount namespace |
+| `service_account_name` | yes | ServiceAccount name |
+| `bound_audiences` | no | Default `["vault"]` |
+
 ## Registry usage
 
 ```hcl
