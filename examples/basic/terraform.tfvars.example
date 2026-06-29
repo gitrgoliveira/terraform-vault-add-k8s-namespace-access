@@ -1,0 +1,3 @@
+principal_name       = "payments"
+ocp_namespace        = "payments-ns"
+service_account_name = "payments-sa"
