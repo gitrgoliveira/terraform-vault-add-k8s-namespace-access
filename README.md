@@ -41,7 +41,7 @@ Principal. This module creates identity and login, but no secret policy grants.
 
 ## No-code provisioning
 
-This module is no-code enabled in the `hc-ric-demo` private registry (pinned to `0.0.1`). Open the module, click **Provision workspace**, choose a project and workspace name, then complete the form. Trust outputs from `cluster-onboarding` feed `jwt_auth_path` and `jwt_mount_accessor`.
+This module is no-code enabled in the `hc-ric-demo` private registry (pinned to `0.0.2`). Open the module, click **Provision workspace**, choose a project and workspace name, then complete the form. Trust outputs from `cluster-onboarding` feed `jwt_auth_path` and `jwt_mount_accessor`.
 
 Form fields:
 
@@ -60,7 +60,7 @@ Form fields:
 ```hcl
 module "add_k8s_namespace" {
   source  = "app.terraform.io/<org>/add-k8s-namespace-access/vault"
-  version = "~> 0.1"
+  version = "~> 0.0.2"
 
   cluster_name         = "ocp-prod-eu"
   principal_name       = "payments"
